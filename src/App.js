@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import DisplayFeatures from './DisplayFeatures';
-
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from 'slugify';
+import Cart from './Cart';
+import Total from './Total'
 import './App.css';
 
 class App extends Component {
@@ -29,9 +26,7 @@ class App extends Component {
     }
   };
 
-  // updates aspects of 'selected' object in state.  this should get passed down as callback function from App.
   updateFeature = (feature, newValue) => {
-    // creates a new object containing new value of selected feature.  assigns this 'new' object state (...with the same)
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
@@ -39,22 +34,22 @@ class App extends Component {
     });
   };
 
-  
   render() {
-  // this is how App begins.  Components can be placed in each section/div below.
     return (
       <div className="App">
         <header>
           <h1>ELF COMPUTERS | Laptops</h1>
         </header>
         <main>
-          
-
+          <DisplayFeatures 
+            features = {this.props.FEATURES}
+            updateFeature={this.updateFeature} 
+            selected={this.state.selected}/>
           <section className="main__summary">
-          
-          
-
-          
+            <Cart 
+              selected={this.state.selected}/>
+            <Total 
+              selected={this.state.selected}/>
           </section>
         </main>
       </div>
