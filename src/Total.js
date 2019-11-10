@@ -6,8 +6,8 @@ class Total extends Component {
 
     render() {
         // this is calculated total.  
-        const total = Object.keys(this.state.selected).reduce(
-            (acc, curr) => acc + this.state.selected[curr].cost,
+        const total = Object.keys(this.props.selected).reduce(
+            (acc, curr) => acc + this.props.selected[curr].cost,
             0
         );
 
@@ -15,7 +15,7 @@ class Total extends Component {
             <div className="summary__total">
             <div className="summary__total__label">Total</div>
             <div className="summary__total__value">
-                {this.props.USCurrencyFormat.format(total)}
+                {this.props.currency.format(total)}
             </div>
             </div>
         )

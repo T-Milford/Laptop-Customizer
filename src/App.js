@@ -49,7 +49,7 @@ class App extends Component {
         </header>
         <main>
           <DisplayFeatures 
-            features = {this.props.FEATURES}
+            features = {this.props.features}
             updateFeature={this.updateFeature} 
             selected={this.state.selected}
             currency = {this.USCurrencyFormat}/>
