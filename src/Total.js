@@ -13,7 +13,7 @@ total = Object.keys(this.props.selected).reduce(
             <div className="summary__total">
             <div className="summary__total__label">Total</div>
             <div className="summary__total__value">
-                {this.props.currency.format(this.total())}
+                {this.props.currency.format(this.total)}
             </div>
             </div>
         )

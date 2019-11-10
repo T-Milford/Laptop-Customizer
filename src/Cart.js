@@ -14,7 +14,11 @@ class Cart extends Component {
                                 <div className="summary__option__label">{feature} </div>
                                 <div className="summary__option__value">{selectedOption.name}</div>
                                 {/* <div className="summary__option__cost">{USCurrencyFormat.format(selectedOption.cost)} </div> */}
-                                <div className="summary__option__cost"><Total /></div>
+                                <div className="summary__option__cost">
+                                <Total 
+                                    selected={this.props.selected}
+                                    currency={this.props.currency}/>
+                                </div>
                             </div>
                         </>
                     

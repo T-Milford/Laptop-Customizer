@@ -9,7 +9,7 @@ class DisplayFeatures extends Component {
             return (
                 <Feature 
                     features = {this.props.features} 
-                    updateFeatures = {this.props.updateFeatures} 
+                    updateFeature = {this.props.updateFeature} 
                     selected={this.props.selected}
                     featureHash={featureHash} 
                     feature = {feature}

@@ -58,9 +58,6 @@ class App extends Component {
             <Cart 
               selected={this.state.selected}
               currency={this.USCurrencyFormat}/>
-            <Total 
-              selected={this.state.selected}
-              currency={this.USCurrencyFormat}/>
           </section>
         </main>
       </div>
