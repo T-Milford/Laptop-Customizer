@@ -3,7 +3,8 @@ import Total from './Total';
 
 class Cart extends Component {
     render() {
-            Object.keys(this.state.selected).map((feature, idx) => {
+            return (
+                Object.keys(this.state.selected).map((feature, idx) => {
                 
                 const featureHash = feature + '-' + idx;
                 const selectedOption = this.state.selected[feature];
@@ -18,7 +19,8 @@ class Cart extends Component {
                         </>
                     
                 )
-            })
+                })
+            )
         
     }
   }
