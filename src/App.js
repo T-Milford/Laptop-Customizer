@@ -26,6 +26,13 @@ class App extends Component {
     }
   };
 
+  // This object will allow us to
+  // easily convert numbers into US dollar values
+    const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    });
+
   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
@@ -46,6 +53,7 @@ class App extends Component {
             updateFeature={this.updateFeature} 
             selected={this.state.selected}/>
           <section className="main__summary">
+          <h2>Your cart</h2>  
             <Cart 
               selected={this.state.selected}/>
             <Total 

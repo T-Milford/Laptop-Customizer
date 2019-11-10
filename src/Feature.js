@@ -3,6 +3,7 @@ import slugify from 'slugify';
 
 class Feature extends Component {
     render() {
+        const feature = this.props.feature;
         const options = this.props.features[feature].map(item => {
             const itemHash = slugify(JSON.stringify(item));
 
