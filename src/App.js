@@ -51,13 +51,16 @@ class App extends Component {
           <DisplayFeatures 
             features = {this.props.FEATURES}
             updateFeature={this.updateFeature} 
-            selected={this.state.selected}/>
+            selected={this.state.selected}
+            currency = {this.USCurrencyFormat}/>
           <section className="main__summary">
           <h2>Your cart</h2>  
             <Cart 
-              selected={this.state.selected}/>
+              selected={this.state.selected}
+              currency={this.USCurrencyFormat}/>
             <Total 
-              selected={this.state.selected}/>
+              selected={this.state.selected}
+              currency={this.USCurrencyFormat}/>
           </section>
         </main>
       </div>

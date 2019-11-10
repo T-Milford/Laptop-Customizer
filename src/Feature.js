@@ -18,7 +18,7 @@ class Feature extends Component {
                     onChange={e => this.props.updateFeature(feature, item)}
                 />
                 <label htmlFor={itemHash} className="feature__label">
-                    {item.name} ({USCurrencyFormat.format(item.cost)})
+                    {item.name} ({this.props.USCurrencyFormat.format(item.cost)})
                 </label>
                 </div>
             );
