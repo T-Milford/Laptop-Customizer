@@ -4,10 +4,10 @@ import Total from './Total';
 class Cart extends Component {
     render() {
             Object.keys(this.state.selected).map((feature, idx) => {
-                return (
+                
                 const featureHash = feature + '-' + idx;
                 const selectedOption = this.state.selected[feature];
-                    return (
+                return (
                         <>
                             <div className="summary__option" key={featureHash}>
                                 <div className="summary__option__label">{feature} </div>
@@ -16,7 +16,7 @@ class Cart extends Component {
                                 <div className="summary__option__cost"><Total /></div>
                             </div>
                         </>
-                    );
+                    
                 )
             })
         
