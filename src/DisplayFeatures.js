@@ -11,7 +11,7 @@ class DisplayFeatures extends Component {
                     features = {this.props.features} 
                     updateFeatures = {this.props.updateFeatures} 
                     selected={this.props.selected}
-                    featureHash={this.featureHash} />
+                    featureHash={featureHash} />
             )
         
         });
