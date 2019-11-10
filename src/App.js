@@ -28,10 +28,10 @@ class App extends Component {
 
   // This object will allow us to
   // easily convert numbers into US dollar values
-    USCurrencyFormat = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
-    });
+  USCurrencyFormat = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  });
 
   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
