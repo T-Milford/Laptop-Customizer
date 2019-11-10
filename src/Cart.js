@@ -11,6 +11,7 @@ class Cart extends Component {
                         <div className="summary__option" key={featureHash}>
                         <div className="summary__option__label">{feature} </div>
                         <div className="summary__option__value">{selectedOption.name}</div>
+                        {/* Total should be run below */}
                         <div className="summary__option__cost">{USCurrencyFormat.format(selectedOption.cost)} </div>
                         </div>
                     </>

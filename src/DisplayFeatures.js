@@ -4,13 +4,21 @@ import Feature from './Feature';
 
 class DisplayFeatures extends Component { 
     render() {
-        return (
-            <form className="main__form">
-                <h2>Customize your laptop</h2>
+        const features = Object.keys(this.props.features).map((feature, idx) => {
+            const featureHash = feature + '-' + idx;
+            return (
                 <Feature 
                     features = {this.props.features} 
                     updateFeatures = {this.props.updateFeatures} 
-                    selected={this.props.selected} />
+                    selected={this.props.selected}
+                    featureHash={this.featureHash} />
+            )
+        
+        });
+        return (
+            <form className="main__form">
+                <h2>Customize your laptop</h2>
+                {features}
             </form>
         )
     }
