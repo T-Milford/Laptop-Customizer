@@ -9,13 +9,15 @@ total = Object.keys(this.props.selected).reduce(
     0
 );
     render() {
-        return (        
+        return (       
+            <div className="summary__option__cost">
             <div className="summary__total">
             <div className="summary__total__label">Total</div>
             <div className="summary__total__value">
                 {this.props.currency.format(this.total)}
             </div>
             </div>
+            </div> 
         )
     }
 }
