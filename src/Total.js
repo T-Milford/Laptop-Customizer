@@ -12,14 +12,14 @@ class Total extends Component {
         );
         console.log(this.total);
         return (       
-            <div className="summary__option__cost">
+            
             <div className="summary__total">
             <div className="summary__total__label">Total</div>
             <div className="summary__total__value">
                 {this.props.currency.format(total)}
             </div>
             </div>
-            </div> 
+            
         )
     }
 }

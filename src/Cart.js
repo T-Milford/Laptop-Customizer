@@ -6,11 +6,15 @@ class Cart extends Component {
             Object.keys(this.props.selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             const selectedOption = this.props.selected[feature];
+            const cost = selectedOption.cost;
+            const currency = this.props.currency.format;
+
             return (
                     <>
                         <div className="summary__option" key={featureHash}>
                             <div className="summary__option__label">{feature} </div>
-                            <div className="summary__option__value">{selectedOption.name}</div>                            
+                            <div className="summary__option__value">{selectedOption.name}</div>                        
+                            <div className="summary__option__cost">{currency(cost)}</div>
                         </div>
                     </>
                 
